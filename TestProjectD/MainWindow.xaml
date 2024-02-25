@@ -1,0 +1,27 @@
+﻿<Window x:Class="TestProjectD.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:oxy="http://oxyplot.org/wpf"
+        mc:Ignorable="d"
+        Title="Pulse Graph" Height="300" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock Grid.Row="0" Text="Pulse" FontSize="20" FontWeight="Bold" Margin="5" />
+
+        <oxy:PlotView Grid.Row="1" Model="{Binding MyModel}" Margin="5" />
+
+        <TextBlock Grid.Row="3"
+            x:Name="CurrentPulseTextBlock" 
+                   Foreground="#0fd208"
+                   FontSize="24"
+                   FontWeight="Bold" />
+
+    </Grid>
+</Window>
